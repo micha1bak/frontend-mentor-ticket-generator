@@ -1,8 +1,13 @@
 export function Avatar() {
 
   const labelStles = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    maxWidth: '400px',
     border: '1px solid black',
-    padding: '10px'
+    borderRadius: '5px',
+    padding: '30px',
   }
 
   const errorAvatarStyles = {
@@ -17,12 +22,13 @@ export function Avatar() {
     <div>
       <h3>Upload Avatar</h3>
 
+     
       <label for="inputFile"  style={labelStles}>
         <input style={{display: 'none'}} id="inputFile" type="file"/>
         <img src="/assets/images/icon-upload.svg"/>
         Drag and drop or click to upload
       </label>
-
+      
       <div className="avatarUploaded" style={avatarUploadedStyles}>
         <img src="" alt="" />
         <div>
