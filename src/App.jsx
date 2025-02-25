@@ -1,7 +1,9 @@
+import { DefaultHeader } from "./components/DefaultHeader";
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <DefaultHeader />
     </div>
   );
 }
