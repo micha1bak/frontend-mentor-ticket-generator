@@ -1,11 +1,7 @@
 export function Ticket() {
 
-  const ticketStyles = {
-    display: 'none',
-  }
-
   return (
-    <div className="ticket" style={ticketStyles}>
+    <div className="hidden">
       <div className="ticketLeft">
 
         <div className="ticketLeftUp">

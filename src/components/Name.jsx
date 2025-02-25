@@ -8,7 +8,7 @@ export function Name() {
     <div>
     <h3>Full Name</h3>
     <input type="text" />
-      <div className="errorName" style={errorNameStyles}>
+      <div className="hidden">
         <img src="assets\images\icon-info.svg" alt="info" />
         <span>Please enter your full name.</span>
       </div>
