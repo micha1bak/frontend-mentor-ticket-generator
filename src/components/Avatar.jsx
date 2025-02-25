@@ -23,14 +23,14 @@ export function Avatar() {
       <h3>Upload Avatar</h3>
 
      
-      <label for="inputFile"  style={labelStles}>
+      <label htmlFor="inputFile"  style={labelStles}>
         <input style={{display: 'none'}} id="inputFile" type="file"/>
         <img src="/assets/images/icon-upload.svg"/>
         Drag and drop or click to upload
       </label>
       
       <div className="avatarUploaded" style={avatarUploadedStyles}>
-        <img src="" alt="" />
+        <img src="null" alt="avatar" />
         <div>
           <button>Remove image</button>
           <button>Change image</button>

@@ -10,7 +10,7 @@ import { Ticket } from "./components/Ticket";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App flex flex-col items-center">
       <Logo />
 
       <DefaultHeader />
