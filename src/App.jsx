@@ -1,4 +1,5 @@
 import { Avatar } from "./components/Avatar";
+import { Button } from "./components/Button";
 import { DefaultHeader } from "./components/DefaultHeader";
 import { Email } from "./components/Email";
 import { GithubUsername } from "./components/GithubUsername";
@@ -14,6 +15,7 @@ function App() {
       <Name />
       <Email />
       <GithubUsername />
+      <Button />
     </div>
   );
 }
