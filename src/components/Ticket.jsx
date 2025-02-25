@@ -1,13 +1,14 @@
 export function Ticket() {
+
   return (
-    <div className="ticket">
+    <div className="ticket" style={{display: 'block'}}>
       <div className="ticketLeft">
 
         <div className="ticketLeftUp">
           <img src="assets\images\logo-mark.svg" alt="logo"/>
           <div>
             <h2>Coding Conf</h2>
-            <p>[date / location]</p>
+            <span>[date / location]</span>
           </div>
         </div>
 
@@ -17,11 +18,14 @@ export function Ticket() {
             <h2>[Your Name]</h2>
             <div>
               <img src="assets\images\icon-github.svg" alt="github" />
-              <p>[Github Username]</p>
+              <span>[Github Username]</span>
             </div>
           </div>
         </div>
 
+      </div>
+      <div className="ticketRight">
+        <span>#01609</span>
       </div>
     </div>
   )
