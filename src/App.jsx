@@ -62,6 +62,7 @@ function App() {
       document.getElementById('infoAvatar').style.display = 'none';
       document.getElementById('errAvatar1').style.display = 'block';
     } else {
+      document.getElementById('infoAvatar').style.display = 'block';
       document.getElementById('errAvatar1').style.display = 'none';
     }
 
@@ -87,7 +88,10 @@ function App() {
   return (
     <>
       <Logo />
-      <Header />
+      <Header 
+        name = {name}
+        email = {email}
+      />
       <Avatar 
         handleUploadImage = {handleUploadImage}
         handleChangeImage = {handleChangeImage}

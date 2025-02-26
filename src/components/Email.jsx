@@ -1,12 +1,12 @@
 export function Email({handleEmailChange, email}) {
  
   return (
-    <div>
-      <h3>Email Address</h3>
+    <div className="w-xs">
+      <h3 className="my-2 mt-4">Email Address</h3>
       <input 
         type="email"
         placeholder="example@email.com"
-        className="border border-solid border-white rounded-md"
+        className="outline outline-solid outline-amber-50/60 rounded-xl w-full p-3 bg-blue-100/5 backdrop-blur-lg"
         onChange={handleEmailChange}
         value={email}
       />
