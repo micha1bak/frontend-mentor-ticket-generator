@@ -1,6 +1,6 @@
-export function Button() {
+export function Button({handleSubmit}) {
 
   return (
-    <button className="bg-gray-500">Generate My Ticket</button>
+    <button className="bg-gray-500" onClick={handleSubmit}>Generate My Ticket</button>
   )
 }

@@ -11,7 +11,7 @@ import { useState } from "react";
 
 function App() {
 
-  const [preview, setPreview] = useState(null);
+  const [avatar, setAvatar] = useState(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
@@ -21,7 +21,7 @@ function App() {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setPreview(reader.result);
+        setAvatar(reader.result);
       }
       reader.readAsDataURL(file);
       
@@ -31,7 +31,7 @@ function App() {
   }
 
   const handleRemoveImage = () => {
-    setPreview(null);
+    setAvatar(null);
     
     document.getElementById('avatarInput1').style.display = 'flex';
     document.getElementById('avatarInput2').style.display = 'none';
@@ -53,6 +53,36 @@ function App() {
     setUsername(event.target.value);
   }
 
+  const handleSubmit = () => {
+    validateForm();
+  }
+
+  function validateForm() {
+    if (!avatar) {
+      document.getElementById('infoAvatar').style.display = 'none';
+      document.getElementById('errAvatar1').style.display = 'block';
+    } else {
+      document.getElementById('errAvatar1').style.display = 'none';
+    }
+
+    if (!name) {
+      document.getElementById('errName').style.display = 'block';
+    } else {
+      document.getElementById('errName').style.display = 'none';
+    }
+
+    if (!email) {
+      document.getElementById('errEmail').style.display = 'block';
+    } else {
+      document.getElementById('errEmail').style.display = 'none';
+    }
+
+    if (!username) {
+      document.getElementById('errUsername').style.display = 'block';
+    } else {
+      document.getElementById('errUsername').style.display = 'none';
+    }
+  }
 
   return (
     <>
@@ -62,7 +92,7 @@ function App() {
         handleUploadImage = {handleUploadImage}
         handleChangeImage = {handleChangeImage}
         handleRemoveImage = {handleRemoveImage}
-        preview = {preview}
+        avatar = {avatar}
       />
       <Name 
         handleNameChange = {handleNameChange}
@@ -76,7 +106,9 @@ function App() {
         handleUsernameChange = {handleUsernameChange}
         username = {username}
       />
-      <Button />
+      <Button 
+        handleSubmit = {handleSubmit}
+      />
 
       <Ticket />
       

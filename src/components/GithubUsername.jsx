@@ -10,8 +10,8 @@ export function GithubUsername({handleUsernameChange, username}) {
         onChange={handleUsernameChange}
         value={username}
       />
-      <div className="hidden">
-        <img src="assets\images\icon-info.svg" alt="info" />
+      <div id="errUsername" className="hidden">
+        <img src="assets\images\icon-info.svg" alt="info" className="inline" />
         <span>Please enter your Github username.</span>
       </div>
     </div>
