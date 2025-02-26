@@ -1,4 +1,4 @@
-export function Ticket({avatar, name, username}) {
+export function Ticket({avatar, name, username, formatedDate}) {
 
   return (
     <div id="ticket" className="
@@ -15,7 +15,7 @@ export function Ticket({avatar, name, username}) {
           
           <div className="w-[210px] mt-2">
             <h2 className="font-bold text-2xl">Coding Conf</h2>
-            <span className="opacity-60 text-sm">[date / location]</span>
+            <span className="opacity-60 text-sm">{formatedDate + " / "}<span id="location"></span></span>
           </div>
         </div>
 
@@ -27,7 +27,7 @@ export function Ticket({avatar, name, username}) {
             <h2 className="font-bold text-xl">{name}</h2>
             <a href={"https://github.com/" + username} 
             target="_blank">
-            <label htmlFor="githubLink" className="flex cursor-pointer">
+            <label className="flex cursor-pointer">
               <img id="githubLink"
               className="w-4"
               src="assets\images\icon-github.svg" alt="github" />

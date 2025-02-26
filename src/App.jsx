@@ -15,7 +15,8 @@ function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
-      
+  const formatedDate = getFormatedDate();
+  
   const handleUploadImage = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -57,22 +58,14 @@ function App() {
     if (validateForm()) {
       document.getElementById('header1').style.display = 'none';
       document.getElementById('header2').style.display = 'block';
-
       document.getElementById('avatarInput2').style.display = 'none';
       document.getElementById('infoAvatar').style.display = 'none';
       document.getElementById('avatarTitle').style.display = 'none';
-
-      
       document.getElementById('nameContainer').style.display = 'none';
-
       document.getElementById('emailContainer').style.display = 'none';
-      
       document.getElementById('usernameContainer').style.display = 'none';
-
       document.getElementById('button').style.display = 'none';
-
       document.getElementById('ticket').style.display = 'flex';
-
     }
   }
 
@@ -126,6 +119,25 @@ function App() {
     return emailPattern.test(email);
   }
 
+  function getFormatedDate() {
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const date = new Date();
+    let formatedDate = "";
+
+    formatedDate += months[date.getMonth()] + " ";
+    formatedDate += date.getDate() + ", ";
+    formatedDate += date.getFullYear();
+    return formatedDate;    
+  }
+
+  async function getFormatedLocation() {
+      const response = await fetch("http://ip-api.com/json/");
+      const data = await response.json();
+      document.getElementById("location").innerHTML = String(data.city);
+  }
+
+  getFormatedLocation();
+
   return (
     <>
       <Logo />
@@ -159,6 +171,7 @@ function App() {
         avatar = {avatar}
         name = {name}
         username = {username}
+        formatedDate = {formatedDate}
       />
       
     </>
