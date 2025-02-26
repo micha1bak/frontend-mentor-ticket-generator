@@ -71,7 +71,7 @@ function App() {
 
       document.getElementById('button').style.display = 'none';
 
-      document.getElementById('ticket').style.display = 'block';
+      document.getElementById('ticket').style.display = 'flex';
 
     }
   }
@@ -158,7 +158,6 @@ function App() {
       <Ticket
         avatar = {avatar}
         name = {name}
-        email = {email}
         username = {username}
       />
       
