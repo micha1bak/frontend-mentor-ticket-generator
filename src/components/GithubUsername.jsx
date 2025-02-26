@@ -1,12 +1,4 @@
-import { useState } from "react";
-
-export function GithubUsername() {
-
-  const [username, setUsername] = useState("");
-      
-      const handleUsernameChange = (event) => {
-        setUsername(event.target.value);
-      }
+export function GithubUsername({handleUsernameChange, username}) {
 
   return (
     <div>

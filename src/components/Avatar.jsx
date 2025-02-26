@@ -1,38 +1,4 @@
-import { useState } from "react";
-
-export function Avatar() {
-
-  const [preview, setPreview] = useState(null);
-
-  const handleUploadImage = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setPreview(reader.result);
-      }
-      reader.readAsDataURL(file);
-      
-      const avatarInput1 = document.getElementById('avatarInput1');
-      avatarInput1.style.display = 'none';
-
-      const avatarInput2 = document.getElementById('avatarInput2');
-      avatarInput2.style.display = 'flex';
-    }
-  }
-
-  const handleRemoveImage = () => {
-    setPreview(null);
-    const avatarInput1 = document.getElementById('avatarInput1');
-    avatarInput1.style.display = 'flex';
-
-    const avatarInput2 = document.getElementById('avatarInput2');
-    avatarInput2.style.display = 'none';
-  }
-
-  const handleChangeImage = () => {
-    document.getElementById("inputFile").click();
-  }
+export function Avatar({handleUploadImage, handleChangeImage, handleRemoveImage, preview}) {
   
   return (
     <div>

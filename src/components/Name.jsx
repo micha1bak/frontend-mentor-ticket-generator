@@ -1,12 +1,4 @@
-import { useState } from "react";
-
-export function Name() {
-
-  const [name, setName] = useState("");
-  
-  const handleNameChange = (event) => {
-    setName(event.target.value);
-  }
+export function Name({handleNameChange, name}) {
 
   return (
     <div>

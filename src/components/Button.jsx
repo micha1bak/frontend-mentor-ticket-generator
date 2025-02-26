@@ -1,5 +1,6 @@
 export function Button() {
+
   return (
-    <button>Generate My Ticket</button>
+    <button className="bg-gray-500">Generate My Ticket</button>
   )
 }

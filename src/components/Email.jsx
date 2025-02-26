@@ -1,13 +1,5 @@
-import { useState } from "react";
-
-export function Email() {
-  
-  const [email, setEmail] = useState("");
-    
-    const handleEmailChange = (event) => {
-      setEmail(event.target.value);
-    }
-  
+export function Email({handleEmailChange, email}) {
+ 
   return (
     <div>
       <h3>Email Address</h3>
