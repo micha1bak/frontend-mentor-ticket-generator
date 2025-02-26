@@ -1,7 +1,7 @@
-export function Ticket() {
+export function Ticket({avatar}) {
 
   return (
-    <div className="hidden">
+    <div id="ticket" className="hidden">
       <div className="ticketLeft">
 
         <div className="ticketLeftUp">

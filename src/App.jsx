@@ -54,35 +54,76 @@ function App() {
   }
 
   const handleSubmit = () => {
-    validateForm();
+    if (validateForm()) {
+      document.getElementById('header1').style.display = 'none';
+      document.getElementById('header2').style.display = 'block';
+
+      document.getElementById('avatarInput2').style.display = 'none';
+      document.getElementById('infoAvatar').style.display = 'none';
+      document.getElementById('avatarTitle').style.display = 'none';
+
+      
+      document.getElementById('nameContainer').style.display = 'none';
+
+      document.getElementById('emailContainer').style.display = 'none';
+      
+      document.getElementById('usernameContainer').style.display = 'none';
+
+      document.getElementById('button').style.display = 'none';
+
+      document.getElementById('ticket').style.display = 'block';
+
+    }
   }
 
   function validateForm() {
+
+    let tests = 0;
+
     if (!avatar) {
       document.getElementById('infoAvatar').style.display = 'none';
       document.getElementById('errAvatar1').style.display = 'block';
     } else {
       document.getElementById('infoAvatar').style.display = 'block';
       document.getElementById('errAvatar1').style.display = 'none';
+      tests++;
     }
 
     if (!name) {
       document.getElementById('errName').style.display = 'block';
+      document.getElementById('name').style.outlineColor = 'oklch(0.704 0.191 22.216)';
     } else {
       document.getElementById('errName').style.display = 'none';
+      document.getElementById('name').style.outlineColor = 'color-mix(in oklab, var(--color-amber-50) 60%, transparent)';
+      tests++;
     }
 
-    if (!email) {
+    if (!email || !validateEmail(email)) {
       document.getElementById('errEmail').style.display = 'block';
+      document.getElementById('email').style.outlineColor = 'oklch(0.704 0.191 22.216)';
     } else {
       document.getElementById('errEmail').style.display = 'none';
+      document.getElementById('email').style.outlineColor = 'color-mix(in oklab, var(--color-amber-50) 60%, transparent)';
+      tests++;
     }
 
     if (!username) {
       document.getElementById('errUsername').style.display = 'block';
+      document.getElementById('username').style.outlineColor = 'oklch(0.704 0.191 22.216)';
     } else {
       document.getElementById('errUsername').style.display = 'none';
+      document.getElementById('username').style.outlineColor = 'color-mix(in oklab, var(--color-amber-50) 60%, transparent)';
+      tests++;
     }
+
+    const isValid = (tests === 4) ? true : false;
+
+    return isValid;
+  }
+
+  function validateEmail(email) {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailPattern.test(email);
   }
 
   return (
@@ -114,7 +155,12 @@ function App() {
         handleSubmit = {handleSubmit}
       />
 
-      <Ticket />
+      <Ticket
+        avatar = {avatar}
+        name = {name}
+        email = {email}
+        username = {username}
+      />
       
     </>
   );

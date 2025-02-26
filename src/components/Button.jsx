@@ -1,6 +1,13 @@
 export function Button({handleSubmit}) {
 
   return (
-    <button className="bg-red-300 text-black p-3 w-full my-7 rounded-xl" onClick={handleSubmit}>Generate My Ticket</button>
+    <button id="button" className="
+      bg-button-orange 
+      hover:bg-button-orange-hover
+      hover:cursor-pointer
+      p-3 w-full my-7 rounded-xl"
+      onClick={handleSubmit}>
+        <span className="text-black! font-bold">Generate My Ticket</span>
+    </button>
   )
 }

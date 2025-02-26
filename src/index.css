@@ -4,6 +4,8 @@
 
 @theme {
   --font-inconsolata: "Inconsolata", sans-serif;
+  --color-button-orange: #ff8080;
+  --color-button-orange-hover: #ff6666;
 }
 
 * {
