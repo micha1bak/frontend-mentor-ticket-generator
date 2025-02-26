@@ -4,13 +4,13 @@ export function Avatar({handleUploadImage, handleChangeImage, handleRemoveImage,
     <div>
       <h3>Upload Avatar</h3>
      
-      <label id="avatarInput1" htmlFor="inputFile" className="flex flex-col items-center border border-dashed border-black rounded-lg ">
+      <label id="avatarInput1" htmlFor="inputFile" className="flex flex-col items-center border border-dashed border-white rounded-lg ">
         <input className="hidden" id="inputFile" type="file" onChange={handleUploadImage}/>
         <img src="/assets/images/icon-upload.svg" className="w-15 h-15"/>
         Drag and drop or click to upload
       </label>
       
-      <div id="avatarInput2" className="hidden flex-col items-center border border-dashed border-black rounded-lg">
+      <div id="avatarInput2" className="hidden flex-col items-center border border-dashed border-white rounded-lg">
         <img src={avatar} alt="avatar" className="w-15 h-15"/>
         <div>
           <button className="bg-gray-400 rounded-md" onClick={handleRemoveImage}>Remove image</button>

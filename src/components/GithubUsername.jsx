@@ -6,7 +6,7 @@ export function GithubUsername({handleUsernameChange, username}) {
       <input 
         type="text" 
         placeholder="@yourusername" 
-        className="border border-solid border-black rounded-md"
+        className="border border-solid border-white rounded-md"
         onChange={handleUsernameChange}
         value={username}
       />

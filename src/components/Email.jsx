@@ -6,7 +6,7 @@ export function Email({handleEmailChange, email}) {
       <input 
         type="email"
         placeholder="example@email.com"
-        className="border border-solid border-black rounded-md"
+        className="border border-solid border-white rounded-md"
         onChange={handleEmailChange}
         value={email}
       />

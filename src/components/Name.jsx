@@ -6,7 +6,7 @@ export function Name({handleNameChange, name}) {
       <input 
         id="name" 
         type="text" 
-        className="border border-solid border-black rounded-md" 
+        className="border border-solid border-white rounded-md" 
         onChange={handleNameChange}
         value={name}
       />
