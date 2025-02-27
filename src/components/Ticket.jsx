@@ -3,7 +3,7 @@ export function Ticket({avatar, name, username, formatedDate}) {
   return (
     <div id="ticket" className="
       hidden w-xs h-[149px] bg-cover bg-center bg-no-repeat
-      bg-[url(assets/images/pattern-ticket.svg)]
+      bg-[url(/public/assets/images/pattern-ticket.svg)]
       items-center justify-between
     ">
       <div className="flex flex-col h-full justify-between">
