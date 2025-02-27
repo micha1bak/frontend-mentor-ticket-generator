@@ -56,6 +56,7 @@ function App() {
 
   const handleSubmit = () => {
     if (validateForm()) {
+      getFormatedLocation();
       document.getElementById('header1').style.display = 'none';
       document.getElementById('header2').style.display = 'block';
       document.getElementById('avatarInput2').style.display = 'none';
@@ -131,12 +132,10 @@ function App() {
   }
 
   async function getFormatedLocation() {
-      const response = await fetch("http://ip-api.com/json/");
-      const data = await response.json();
-      document.getElementById("location").innerHTML = String(data.city);
+    const response = await fetch("http://ip-api.com/json/");
+    const data = await response.json();
+    document.getElementById("location").innerHTML = String(data.city);   
   }
-
-  getFormatedLocation();
 
   return (
     <>
