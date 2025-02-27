@@ -16,12 +16,15 @@ export function Avatar({handleUploadImage, handleChangeImage, handleRemoveImage,
           Drag and drop or click to upload
       </label>
       
-      <div id="avatarInput2" className=
-        "hidden flex-col items-center justify-center outline outline-dashed rounded-xl my-2 h-32">
-        <img src={avatar} alt="avatar" className="w-15 h-15"/>
+      <div id="avatarInput2" className="
+        hidden flex-col items-center justify-center 
+        outline outline-dashed outline-amber-50/60 
+        rounded-xl my-2 h-32 bg-blue-100/5 backdrop-blur-lg
+      ">
+        <img src={avatar} alt="avatar" className="w-12 h-12 mb-3 rounded-xl"/>
         <div>
-          <button className="bg-gray-400 rounded-md p-0.5 mx-0.5" onClick={handleRemoveImage}>Remove image</button>
-          <button className="bg-gray-400 rounded-md p-0.5 mx-0.5" onClick={handleChangeImage}>Change image</button>
+          <button className="bg-blue-100/5 backdrop-blur-lg rounded-md px-1.5 mx-1 underline underline-offset-2" onClick={handleRemoveImage}>Remove image</button>
+          <button className="bg-blue-100/5 backdrop-blur-lg rounded-md px-1.5 mx-1" onClick={handleChangeImage}>Change image</button>
         </div>
       </div>
       
