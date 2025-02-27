@@ -23,8 +23,8 @@ export function Avatar({handleUploadImage, handleChangeImage, handleRemoveImage,
       ">
         <img src={avatar} alt="avatar" className="w-12 h-12 mb-3 rounded-xl"/>
         <div>
-          <button className="bg-blue-100/5 backdrop-blur-lg rounded-md px-1.5 mx-1 underline underline-offset-2" onClick={handleRemoveImage}>Remove image</button>
-          <button className="bg-blue-100/5 backdrop-blur-lg rounded-md px-1.5 mx-1" onClick={handleChangeImage}>Change image</button>
+          <button className="bg-blue-100/5 backdrop-blur-lg rounded-md px-1.5 mx-1 underline underline-offset-2 cursor-pointer" onClick={handleRemoveImage}>Remove image</button>
+          <button className="bg-blue-100/5 backdrop-blur-lg rounded-md px-1.5 mx-1 cursor-pointer" onClick={handleChangeImage}>Change image</button>
         </div>
       </div>
       

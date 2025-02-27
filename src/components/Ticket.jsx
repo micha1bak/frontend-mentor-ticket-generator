@@ -15,7 +15,7 @@ export function Ticket({avatar, name, username, formatedDate}) {
           
           <div className="w-[210px] mt-2">
             <h2 className="font-bold text-2xl">Coding Conf</h2>
-            <span className="opacity-60 text-sm">{formatedDate + " / "}<span id="location"></span></span>
+            <span className="opacity-60 text-sm">{formatedDate + " / Austin, TX"}</span>
           </div>
         </div>
 
