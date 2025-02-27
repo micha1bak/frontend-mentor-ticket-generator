@@ -132,6 +132,10 @@ function App() {
 
   return (
     <>
+      <img src="public\assets\images\pattern-lines.svg" className="absolute max-h-200 -z-1"/>
+      <img src="public\assets\images\pattern-squiggly-line-top.svg" className="absolute top-0 right-0 -z-1"/>
+      <img src="public\assets\images\pattern-squiggly-line-bottom-mobile-tablet.svg" className="absolute -bottom-50 left-0 lg:hidden -z-1" />
+      <img src="public\assets\images\pattern-squiggly-line-bottom-mobile-tablet.svg" className="hidden absolute -bottom-40 left-0 lg:block -z-1" />
       <Logo />
       <Header 
         name = {name}
