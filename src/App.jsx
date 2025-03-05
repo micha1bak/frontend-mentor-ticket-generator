@@ -58,6 +58,7 @@ function App() {
     if (validateForm()) {
       document.getElementById('header1').style.display = 'none';
       document.getElementById('header2').style.display = 'block';
+      document.getElementById('avatar-container').style.display = 'none';
       document.getElementById('avatarInput2').style.display = 'none';
       document.getElementById('infoAvatar').style.display = 'none';
       document.getElementById('avatarTitle').style.display = 'none';

@@ -2,7 +2,8 @@ export function Ticket({avatar, name, username, formatedDate}) {
 
   return (
     <div id="ticket" className="
-      hidden w-xs h-[149px] bg-cover bg-center bg-no-repeat
+      aspect-[600/280]
+      hidden w-full h-full bg-cover bg-center bg-no-repeat
       bg-[url(/public/assets/images/pattern-ticket.svg)]
       items-center justify-between
     ">

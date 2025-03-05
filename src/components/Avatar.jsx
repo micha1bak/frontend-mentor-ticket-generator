@@ -1,7 +1,7 @@
 export function Avatar({handleUploadImage, handleChangeImage, handleRemoveImage, avatar}) {
   
   return (
-    <div className="w-full aspect-[2/1]">
+    <div id="avatar-container" className="w-full aspect-[2/1]">
       <h3 id="avatarTitle" className="text-xl opacity-80 my-2">Upload Avatar</h3>
      
       <label id="avatarInput1" htmlFor="inputFile" className="
