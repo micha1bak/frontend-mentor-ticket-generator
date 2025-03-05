@@ -8,14 +8,17 @@
   </head>
   <body class=
     "flex flex-col items-center 
-    bg-black
+    bg-black relative min-h-[1100px]
     bg-[url(/assets/images/background-mobile.png)] 
     md:bg-[url(/assets/images/background-tablet.png)] 
     lg:bg-[url(/assets/images/background-desktop.png)]
-    lg:h-screen
     bg-cover bg-center bg-no-repeat"
   >
     <div id="root"  class="flex flex-col items-center max-w-xl"></div>
+    <img src="assets\images\pattern-lines.svg" class="absolute -z-1"/>
+    <img src="assets\images\pattern-squiggly-line-top.svg" class=" absolute top-0 right-0 -z-1"/>
+    <img src="assets\images\pattern-squiggly-line-bottom-mobile-tablet.svg" class="absolute bottom-0 left-0 lg:hidden -z-1" />
+    <img src="assets\images\pattern-squiggly-line-bottom-mobile-tablet.svg" class="hidden absolute top-[50%] lg:top-[52%] left-0 lg:block -z-1" />
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
