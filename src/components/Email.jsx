@@ -1,8 +1,8 @@
 export function Email({handleEmailChange, email}) {
  
   return (
-    <div id="emailContainer" className="w-xs">
-      <h3 className="my-2 mt-4">Email Address</h3>
+    <div id="emailContainer" className="w-full">
+      <h3 className="my-2 mt-4 md:text-[20px] lg:text-2xl opacity-70 font-bold">Email Address</h3>
       <input 
         id="email"
         type="email"

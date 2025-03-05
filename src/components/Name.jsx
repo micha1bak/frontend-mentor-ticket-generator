@@ -1,8 +1,8 @@
 export function Name({handleNameChange, name}) {
 
   return (
-    <div id="nameContainer" className="w-xs">
-      <h3 className="my-2 mt-4">Full Name</h3>
+    <div id="nameContainer" className="w-full my-4">
+      <h3 className="my-2 mt-4 md:text-[20px] lg:text-2xl opacity-70 font-bold">Full Name</h3>
       <input 
         id="name" 
         type="text" 

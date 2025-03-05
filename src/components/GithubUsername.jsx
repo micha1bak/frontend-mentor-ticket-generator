@@ -1,8 +1,8 @@
 export function GithubUsername({handleUsernameChange, username}) {
 
   return (
-    <div id="usernameContainer" className="w-xs">
-      <h3 className="py-2 mt-4">Github Username</h3>
+    <div id="usernameContainer" className="w-full my-4">
+      <h3 className="py-2 mt-4 md:text-[20px] lg:text-2xl opacity-70 font-bold">Github Username</h3>
       <input 
         id="username"
         type="text" 
