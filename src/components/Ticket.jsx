@@ -42,11 +42,11 @@ export function Ticket({avatar, name, username, formatedDate}) {
 
       <div className="
         flex justify-center items-center 
-        w-[20%] h-[149px] opacity-50
+        w-[20%] h-full opacity-50
       ">
         <span className="
           [writing-mode:vertical-rl]
-          text-xl
+          text-xl md:text-2xl lg:text-3xl
         ">#01609</span>
       </div>
 
