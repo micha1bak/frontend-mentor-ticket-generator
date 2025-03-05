@@ -6,7 +6,7 @@ export function Avatar({handleUploadImage, handleChangeImage, handleRemoveImage,
      
       <label id="avatarInput1" htmlFor="inputFile" className="
         flex flex-col items-center justify-center 
-        outline outline-dashed outline-amber-50/60
+        outline-3 outline-dashed outline-amber-50/60
         hover:cursor-pointer
         my-2 h-[70%] p-3 
         rounded-xl w-full bg-blue-100/5 backdrop-blur-lg
@@ -18,7 +18,7 @@ export function Avatar({handleUploadImage, handleChangeImage, handleRemoveImage,
       
       <div id="avatarInput2" className="
         hidden flex-col items-center justify-center 
-        outline outline-dashed outline-amber-50/60 
+        outline-3 outline-dashed outline-amber-50/60 
         rounded-xl my-2 h-[70%] bg-blue-100/5 backdrop-blur-lg
       ">
         <img src={avatar} alt="avatar" className="w-20 aspect-square mb-3 rounded-xl"/>
