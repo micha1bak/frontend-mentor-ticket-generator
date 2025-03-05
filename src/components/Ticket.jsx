@@ -21,18 +21,18 @@ export function Ticket({avatar, name, username, formatedDate}) {
         </div>
 
         <div className="flex w-full h-[50%]">
-          <div className="flex items-center justify-center w-[74.5px]">
-           <img className="w-13 h-13 rounded-lg" src={avatar} alt="avatar"/>
+          <div className="flex items-center justify-center w-[27%]">
+           <img className="w-13 h-13 rounded-lg md:w-15 md:h-15 lg:w-20 lg:h-20" src={avatar} alt="avatar"/>
           </div>
-          <div className="flex flex-col w-[185.5px] justify-between py-3">
-            <h2 className="font-bold text-xl">{name}</h2>
+          <div className="flex flex-col w-[73%] justify-between py-3 h-[90%]">
+            <h2 className="text-xl md:text-3xl md:pt-2 lg:text-4xl lg:pt-4">{name}</h2>
             <a href={"https://github.com/" + username} 
             target="_blank">
             <label className="flex cursor-pointer">
               <img id="githubLink"
-              className="w-4"
+              className="w-4 md:pb-1 lg:pb-2"
               src="assets\images\icon-github.svg" alt="github" />
-              <span className="pl-1 text-[12px] opacity-60">{username}</span>
+              <span className="pl-1 text-[12px] opacity-60 md:pb-1 md:text-[16px] lg:pb-2 lg:text-xl">{username}</span>
             </label>
             </a>
           </div>
